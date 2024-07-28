@@ -113,7 +113,7 @@ header:hover .profile-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -149,7 +149,7 @@ header:hover .profile-image {
 
 .a-contact a{
   text-decoration: none;
-  color: #b26cf7;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
