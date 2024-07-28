@@ -5,6 +5,8 @@ const Contact: React.FC = () => (
     <h2>Contacto</h2>
     <p>Email: rmrpinchao@gmail.com</p>
     <p>Numero de celular: (+57) 3217849789</p>
+    <p className='a-contact'>Github: <a href="https://github.com/PinchaoRamiro">https://github.com/PinchaoRamiro</a></p>
+    <p className='a-contact'>Linkedin: <a href="https://www.linkedin.com/in/ramiro-antonio-pinchao-chachinoy-5038a931b">https://www.linkedin.com/in/ramiro-antonio-pinchao-chachinoy</a></p>
   </section>
 );
 

@@ -11,12 +11,17 @@ interface Repo {
 const Projects: React.FC = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
+  const excludedRepos = ["PinchaoRamiro", "proyecto1", "Proyecto3","Proyecto4","Proyecto5", "proyecto6"
+    ,"Portafolio_Ramiro_Pinchao"
+  ];
 
   useEffect(() => {
     const fetchRepos = async () => {
       try {
         const response = await axios.get('https://api.github.com/users/PinchaoRamiro/repos');
-        setRepos(response.data);
+        const results: Repo[] = [];
+        const filteredRepos = response.data.filter((repo: Repo) => !excludedRepos.includes(repo.name));
+        setRepos(filteredRepos);
       } catch (error) {
         console.error('Error fetching the repositories', error);
       } finally {

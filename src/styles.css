@@ -12,7 +12,13 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header, nav, section {
+a {
+  text-decoration: none;
+  color: #8921ff;
+  transition: color 0.3s ease;
+}
+
+header, section {
   padding: 20px;
   margin: 10px 0;
 }
@@ -29,29 +35,6 @@ header h1 {
   animation: fadeInDown 1s ease-in-out;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-nav ul li {
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: #2c72ff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.5s ease;
-}
-
-nav ul li a:hover {
-  color: #97e648;
-}
 
 section h2 {
   font-size: 2rem;
@@ -65,28 +48,24 @@ section p, section ul {
   animation: fadeInRight 1s ease-in-out;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-}
-
-li strong {
-  color: #61dafb;
-}
-
 .nav {
-  color: #1e90ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
-a:hover {
-  color: #fe8e7a;
+.container-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
+
 
 .skills {
   background-color: #1a1a1a;
@@ -114,24 +93,6 @@ a:hover {
 .skills-category h3 {
   font-size: 18px;
   margin-bottom: 8px;
-}
-
-.skills-category ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.skills-category li {
-  margin-bottom: 8px;
-}
-
-.skills-category li::before {
-  content: '•';
-  color: #61dafb;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
 }
 
 .profile-image {
@@ -163,10 +124,16 @@ header:hover .profile-image {
 
 .project-item {
   background-color: #292929;
-  color: #e0e0e0;
+  color: #da1212;
   padding: 15px;
   border-radius: 8px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.a-contact a{
+  text-decoration: none;
+  color: #b26cf7;
+  transition: color 0.3s ease;
 }
 
 .project-item:hover {
