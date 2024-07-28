@@ -6,9 +6,10 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Education from './components/Education';
 import Projects from './components/Projects';
+import './styles.css';
 
 const App: React.FC = () => (
-  <div>
+  <div className='background-image'>
     <Header />
     <Nav />
     <About />

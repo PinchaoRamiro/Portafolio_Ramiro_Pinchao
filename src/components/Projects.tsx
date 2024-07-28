@@ -33,6 +33,7 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
+    <div>
     <section className="projects" id='projects'>
       <h2>Mis Proyectos</h2>
       {loading ? (
@@ -49,6 +50,7 @@ const Projects: React.FC = () => {
         </ul>
       )}
     </section>
+    </div>
   );
 };
 
