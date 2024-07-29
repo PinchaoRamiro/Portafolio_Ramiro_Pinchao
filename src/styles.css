@@ -136,26 +136,22 @@ header:hover .profile-image {
 .ul-projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+  margin-left: 7%;
+  margin-right: 7%;
   gap: 20px;
 }
 
-.project-item {
-  background-color: #292929;
-  color: #da1212;
-  padding: 15px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+#about, #education, #contact{
+  margin-left: 7%;
+  margin-right: 7%
 }
 
 .a-contact a{
   text-decoration: none;
   color: #ffffff;
   transition: color 0.3s ease;
-}
-
-.project-item:hover {
-  transform: translateY(-5px);
-  background-color: #757575;
 }
 
 @keyframes fadeInLeft {
