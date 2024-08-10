@@ -2,18 +2,22 @@ import React from 'react';
 
 const Education: React.FC = () => (
   <section id="education">
-    <h2>Educación</h2>
+    <h2>Education</h2>
     <ul>
       <li>
-        <strong>Bootcamp Desarrollo Web Full Stack</strong> - 300 horas intensivas
-        <p>Basado en el modelo de la Universidad 42 de Francia, donde el aprendizaje es completamente independiente.</p>
+        <strong>Full Stack Web Development Bootcamp</strong>
+        <p>2024</p>
+        <p>Based on the University 42 model in France, where learning is completely independent.</p>
       </li>
       <li>
-      <strong>Idiomas</strong>
-        <ul>
-          <li>Ingles - A2</li>
-          <li>Espanol (nativo)</li>
-        </ul>
+      <strong>Languages</strong>
+        <p>English B1</p>
+        <p>Spanish Native Speaker</p>
+      </li>
+      <li>
+        <strong>University</strong>
+        <p>Universidad Tecnologica de Pereira</p>
+        <p>Computer and systems engineering student - third semester</p>
       </li>
     </ul>
   </section>

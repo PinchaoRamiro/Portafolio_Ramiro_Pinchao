@@ -2,44 +2,44 @@ import React from 'react';
 
 const Skills: React.FC = () => (
     <div className="skills" id='skills'>
-    <h2>HABILIDADES TECNICAS</h2>
+    <h2>TECHNICAL SKILLS</h2>
   <section>
     <div className="skills-category">
-      <h3>Lenguajes y Tecnologías:</h3>
+      <h3>Lenguages and frameworks</h3>
       <ul>
-        <li>HTML5: Semántica, formularios y validaciones, accesibilidad, SEO.</li>
-        <li>CSS3: Diseño de sitios web estáticos y responsivos, animaciones y transiciones.</li>
-        <li>JavaScript: EcmaScript, manipulación del DOM, Fetch API, POO.</li>
-        <li>TypeScript: Mejora del desarrollo.</li>
-        <li>Node.js, Nest.js y Express: Desarrollo backend y APIs REST.</li>
-        <li>React y Next.js: Desarrollo frontend, SSR.</li>
-        <li>Bases de Datos Relacionales: PostgreSQL, conexión de bases de datos con API REST, ORMs (TypeORM).</li>
+        <li><strong>HTML5</strong>: <br></br> Semantics, forms and validations, accessibility, SEO.</li>
+        <li><strong>CSS3</strong>: <br></br>Static and responsive website design, animations and transitions.</li>
+        <li><strong>JavaScript</strong>: <br></br>EcmaScript, DOM manipulation, Fetch API, OOP.</li>
+        <li><strong>TypeScript</strong>: <br></br>To improve the development</li>
+        <li><strong>Node.js NestJs Express</strong>: <br></br>Backend development and REST APIs.</li>
+        <li><strong>React NextJs Tailwind</strong>: <br></br>Frontend development.</li>
+        <li><strong>PostgreSQL</strong>: <br></br>  Database management, also known as SQL and I am familiar with TypeORM.</li>
       </ul>
     </div>
     <div className="skills-category">
-      <h3>Herramientas y Control de Versiones:</h3>
+      <h3>Tools and Version Control:</h3>
       <ul>
         <li> Git, GitHub.</li>
-        <li>Administradores de Paquetes: NPM, Yarn, Bun.</li>
-        <li>Herramientas de Construcción: Vite, Webpack.</li>
-        <li>Entornos de Ejecución: Node.js.</li>
-        <li>Diseño UX/UI: Figma, mejores prácticas.</li>
-        <li>Seguridad Web: HTTPS, CORS, JWT, OAuth.</li>
+        <li>Package Managers: NPM, Yarn, Bun.</li>
+        <li>Construction Tools: Vite, Webpack.</li>
+        <li>Execution Environments: Node.js.</li>
+        <li>UX/UI design: Figma, best practices.</li>
+        <li>Web Security: HTTPS, CORS, JWT, OAuth.</li>
       </ul>
     </div>
     <div className="skills-category">
-      <h3>Metodologías y DevOps:</h3>
+      <h3>Methodologies and DevOps:</h3>
       <ul>
-        <li>Metodologías Ágiles: Scrum.</li>
-        <li>Patrones de Diseño: Principios SOLID, UML.</li>
-        <li>Contenedores: Docker.</li>
-        <li>Nube Básica: AWS.</li>
+        <li>Agile Methodologies: Scrum.</li>
+        <li>Design Patterns: SOLID, UML.</li>
+        <li>Container: Docker.</li>
+        <li>Cloud: AWS.</li>
       </ul>
     </div>
     <div className="skills-category">
-      <h3>Redes e Internet:</h3>
+      <h3>Concepts</h3>
       <ul>
-        <li>Conceptos de Internet: Funcionamiento de Internet, HTTP, nombres de dominio, hosting, DNS y su funcionamiento, navegadores y su funcionamiento.</li>
+        <li>How the Internet works, HTTP, hosting, DNS and how it works, browsers and how they work.</li>
       </ul>
     </div>
   </section>

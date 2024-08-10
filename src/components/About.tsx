@@ -2,9 +2,9 @@ import React from 'react';
 
 const About: React.FC = () => (
   <section id="about">
-    <h2>Sobre Mí</h2>
+    <h2>About Me</h2>
     <p>
-    Como desarrollador web full stack, mi objetivo es aplicar mis conocimientos en tecnologías frontend y backend, junto con mi experiencia en control de versiones, bases de datos, múltiples tecnologías de bakend y frontend, leguajes de programación y metodologías ágiles para crear aplicaciones web robustas y escalables. Aspiro a contribuir en equipos colaborativos utilizando principios de programación orientados a objetos y buenas prácticas de desarrollo, mientras continuó ampliando mis habilidades en redes, optimización SEO, DevOps y todas las tecnologías que se aplican en una determinada área de trabajo. Estoy comprometido con el aprendizaje continuo y la adaptación a nuevas tecnologías para ofrecer soluciones innovadoras y eficientes.
+    As a full stack web developer, my goal is to apply my knowledge in frontend and backend technologies, along with my experience in version control, databases, multiple bakend and frontend technologies, programming languages and agile methodologies to create robust and scalable web applications. I aspire to contribute in collaborative teams using object-oriented programming principles and good development practices, while continuing to expand my skills in networking, SEO optimization, DevOps and all technologies that apply to a given area of work. I am committed to continuous learning and adapting to new technologies to deliver innovative and efficient solutions.
     </p>
   </section>
 );

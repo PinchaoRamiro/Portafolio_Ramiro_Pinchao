@@ -19,7 +19,6 @@ const Projects: React.FC = () => {
     const fetchRepos = async () => {
       try {
         const response = await axios.get('https://api.github.com/users/PinchaoRamiro/repos');
-        const results: Repo[] = [];
         const filteredRepos = response.data.filter((repo: Repo) => !excludedRepos.includes(repo.name));
         setRepos(filteredRepos);
       } catch (error) {
@@ -33,11 +32,10 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <div>
     <section className="projects" id='projects'>
-      <h2>Mis Proyectos</h2>
+      <h2>My Projects</h2>
       {loading ? (
-        <p>Cargando proyectos...</p>
+        <p>Loading...</p>
       ) : (
         <ul className='ul-projects' >
           {repos.map(repo => (
@@ -50,7 +48,6 @@ const Projects: React.FC = () => {
         </ul>
       )}
     </section>
-    </div>
   );
 };
 

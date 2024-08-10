@@ -9,7 +9,7 @@ import Projects from './components/Projects';
 import './styles.css';
 
 const App: React.FC = () => (
-  <div className='background-image'>
+  <div>
     <Header />
     <Nav />
     <About />
