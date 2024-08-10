@@ -7,13 +7,13 @@ const Skills: React.FC = () => (
     <div className="skills-category">
       <h3>Lenguages and frameworks</h3>
       <ul>
-        <li><strong>HTML5</strong>: <br></br> Semantics, forms and validations, accessibility, SEO.</li>
-        <li><strong>CSS3</strong>: <br></br>Static and responsive website design, animations and transitions.</li>
-        <li><strong>JavaScript</strong>: <br></br>EcmaScript, DOM manipulation, Fetch API, OOP.</li>
-        <li><strong>TypeScript</strong>: <br></br>To improve the development</li>
-        <li><strong>Node.js NestJs Express</strong>: <br></br>Backend development and REST APIs.</li>
-        <li><strong>React NextJs Tailwind</strong>: <br></br>Frontend development.</li>
-        <li><strong>PostgreSQL</strong>: <br></br>  Database management, also known as SQL and I am familiar with TypeORM.</li>
+        <li><strong>HTML5</strong>:  Semantics, forms and validations, accessibility, SEO.</li>
+        <li><strong>CSS3</strong>: Static and responsive website design, animations and transitions.</li>
+        <li><strong>JavaScript</strong>: EcmaScript, DOM manipulation, Fetch API, OOP.</li>
+        <li><strong>TypeScript</strong>: To improve the development</li>
+        <li><strong>Node.js NestJs Express:</strong>: Backend development and REST APIs.</li>
+        <li><strong>React NextJs Tailwind</strong>: Frontend development.</li>
+        <li><strong>PostgreSQL</strong>:   Database management, also known as SQL and I am familiar with TypeORM.</li>
       </ul>
     </div>
     <div className="skills-category">
