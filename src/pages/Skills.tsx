@@ -42,6 +42,15 @@ const Skills: React.FC = () => (
         <li>How the Internet works, HTTP, hosting, DNS and how it works, browsers and how they work.</li>
       </ul>
     </div>
+    <div className="skills-category">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Problem Solving.</li>
+        <li>Communication.</li>
+        <li>Teamwork.</li>
+        <li>Adaptability.</li>
+      </ul>
+    </div>
   </section>
   </div>
 );
