@@ -12,14 +12,11 @@ body {
   color: #ffffff;
   line-height: 1;
   background-image: url(/src/assets/background.webp);
-  background-attachment: fixed;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
-  overflow-y: auto;
-
 }
 
 a {
@@ -37,83 +34,6 @@ strong {
 
 section p, section ul {
   animation: fadeInRight 1s ease-in-out;
-}
-
-.skills {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  margin: 0 20px;
-  border-radius: 8px;
-  overflow-y: auto;
-}
-
-.skills-category {
-  margin: 0 20px 16px;
-}
-
-.skills-category h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.projects {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  padding: 30px;
-  margin: 20px;
-  border-radius: 8px;
-}
-
-.projects h2 {
-  margin: 0px;
-  width: 100%;
-  font-size: 2rem;
-  border-bottom: 2px solid #afadad;
-  text-align: center;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.ul-projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  list-style: none;
-  margin: 0 7%;
-  padding: 10px;
-}
-
-.ul-projects a:hover {
-  padding: 3px;
-  border-radius: 7px;
-  background-color: rgb(32, 22, 92);
-  transition: background-color 0.3s ease;
-}
-
-#about, #education, #contact {
-  margin: 0 7%;
-  color: aliceblue;
-}
-
-#education:hover, #contact:hover {
-  color: #f0f0f0;
-}
-
-.a-contact a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s ease;
-}
-
-.a-contact a:hover {
-  color: #632dbb;
-}
-
-.a-contact strong {
-  color:#d3baf0;
 }
 
 @keyframes fadeInLeft {

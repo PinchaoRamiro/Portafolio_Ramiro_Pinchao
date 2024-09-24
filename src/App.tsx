@@ -9,6 +9,10 @@ import Projects from './pages/Projects';
 import './styles.css';
 import './styles/home.css';
 import './styles/nav.css';
+import './styles/skills.css';
+import './styles/education.css';
+import './styles/projects.css';
+import './styles/contact.css';
 
 const App: React.FC = () => {
   return (
