@@ -1,5 +1,6 @@
 import React from 'react';
-import Imagen from '../assets/profile.png';
+import Imagen from '../assets/profile.jpg';
+import '../styles/home.css';
 
 
 const Header: React.FC = () => (

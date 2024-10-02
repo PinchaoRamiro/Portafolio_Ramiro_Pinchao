@@ -11,7 +11,7 @@ body {
   box-sizing: border-box;
   color: #ffffff;
   line-height: 1;
-  background-image: url(/src/assets/background.webp);
+  background-image: url(/src/assets/background.avif);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,6 +34,10 @@ strong {
 
 section p, section ul {
   animation: fadeInRight 1s ease-in-out;
+}
+
+h2{
+  border-bottom: 2px solid #afadad;
 }
 
 @keyframes fadeInLeft {

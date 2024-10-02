@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
 
   const handleSubmitEmail = (e: any) => {
       e.preventDefault();
-      const email = 'rmrpinchao@gmail'; // Reemplaza con tu correo
+      const email = 'rmrpinchao@gmail'; 
       const encodedSubject = encodeURIComponent(subject);
       const encodedBody = encodeURIComponent(body);
       window.location.href = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
     </div>
     <div className='forms'>
       <form className='form-whatsapp' onSubmit={handleSubmit}>
-        <label htmlFor="message">Write your WhatsApp message here</label>
+        <h2>Write your WhatsApp message here</ h2>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
