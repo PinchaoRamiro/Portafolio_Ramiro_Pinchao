@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './pages/Nav';
@@ -15,11 +16,17 @@ import './styles/projects.css';
 import './styles/contact.css';
 
 const App: React.FC = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const toggleFlip = () => {
+    setIsFlipped(prev => !prev);
+  };
   return (
     <Router>
-      <Navbar />
+      <Navbar onToggleFlip={toggleFlip} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isFlipped={isFlipped}  />} />
+        <Route path="/About" element={<Home isFlipped={isFlipped} />} />
         <Route path="/Education" element={<Education />} /> 
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Skills" element={<Skills />} />

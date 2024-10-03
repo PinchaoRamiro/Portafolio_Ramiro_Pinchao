@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
     </div>
     <div className='forms'>
       <form className='form-whatsapp' onSubmit={handleSubmit}>
-        <h2>Write your WhatsApp message here</ h2>
+        <h2>Write your whatsApp message here</ h2>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}

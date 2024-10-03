@@ -2,9 +2,13 @@ import React from 'react';
 import Imagen from '../assets/profile.jpg';
 import '../styles/home.css';
 
+interface HeaderProps {
+  isFlipped: boolean;
+}
 
-const Header: React.FC = () => (
-  <header className="flip-card">
+
+const Home: React.FC<HeaderProps> = ({ isFlipped }) => (
+  <header className={`flip-card ${isFlipped ? 'flipped' : ''}`}>
     <div className="flip-card-inner">
       <div className="flip-card-front">
         <img src={Imagen} alt="Profile-image" className="profile-image"></img>
@@ -13,7 +17,7 @@ const Header: React.FC = () => (
           <p>Full stack web developer</p>
         </div>
       </div>
-      <div className="flip-card-back">
+      <div className={`flip-card-back`}	 >
         <div>
           <h2>About Me </h2>
           <p>
@@ -25,4 +29,4 @@ const Header: React.FC = () => (
   </header>
 );
 
-export default Header;
+export default Home;

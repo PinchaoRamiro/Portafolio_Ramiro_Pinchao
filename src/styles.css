@@ -6,7 +6,7 @@
 
 body {
   font-family:'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
   background-color: #1a1a1a;
   box-sizing: border-box;
   color: #ffffff;
@@ -15,6 +15,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
   width: 100%;
 }
@@ -38,6 +39,11 @@ section p, section ul {
 
 h2{
   border-bottom: 2px solid #afadad;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 @keyframes fadeInLeft {

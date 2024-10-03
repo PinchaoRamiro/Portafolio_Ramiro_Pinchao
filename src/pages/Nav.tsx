@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onToggleFlip: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onToggleFlip }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev);
+  };
+
   return (
     <nav className="container-nav">
-      <Link className='route' to="/">Home</Link>
-      <Link className='route' to="/Education">Education</Link>
-      <Link className='route' to="/Skills">Skills</Link>
-      <Link className='route' to="/Projects">Projects</Link>
-      <Link className='route' to="/Contact">Contact</Link>
+      <button title='Menu' onClick={toggleMenu} className="menu-button">
+        ☰
+      </button>
+      <div className={`menu ${isMenuOpen ? 'close' : ''}`}>
+        <Link className='route' to="/" onClick={onToggleFlip}>Home</Link>
+        <Link className='route' to="/About" onClick={onToggleFlip}>About me</Link>
+        <Link className='route' to="/Education">Education</Link>
+        <Link className='route' to="/Skills">Skills</Link>
+        <Link className='route' to="/Projects">Projects</Link>
+        <Link className='route' to="/Contact">Contact</Link>
+      </div>
     </nav>
   );
 };

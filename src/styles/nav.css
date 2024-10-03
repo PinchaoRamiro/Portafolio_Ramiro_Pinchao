@@ -2,58 +2,118 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 80%;
-  align-items: center;
-  padding: 3vh 0 3vh 0;
-  margin: 0 10% 0 10%;
-  border-radius: 7px;
-  gap: 1rem;
-  font-size: 1.1rem;
-  flex-wrap: wrap;
+  margin-top: 1%;
 }
   
-  .container-nav .route {
-    color: rgb(32, 2, 141);
-    background-color: rgba(255, 255, 255, 0.3);
-    text-align: center;
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    padding: 5px 10px; 
-    border-radius: 5px;
-    box-shadow: 5px 4px 5px 2px rgba(32, 2, 141, 0.61);
-    transition: background-color 0.3s ease;
-    margin: 5px;
-  }
+.container-nav .route {
+  color: rgb(32, 2, 141);
+  background-color: rgba(255, 255, 255, 0.452);
+  text-align: center;
+  font-weight: bold;
+  width: auto;
+  height: auto;
+  padding: 5px 10px; 
+  border-radius: 5px;
+  box-shadow: 5px 4px 5px 2px rgba(84, 49, 211, 0.568);
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
 
   .container-nav .route:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.699);
     color: rgb(32, 2, 141);
     transform: scale(1.1);
   }
+
+  .menu-button {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    align-self: start;
+    cursor: pointer;
+    margin: 0 0 0 10%;
+  }
+  
+  .menu-button:hover {
+    color: rgb(103, 34, 182);
+    transform: scale(1.1);
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+    padding: 2vh 0 2vh 0;
+    margin: 0 10% 0 0;
+    border-radius: 7px;
+    gap: 1rem;
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+  }
+  
+  .menu.close {
+    display: none;
+  }
+  
   
   @media (max-width: 768px) {
-    .container-nav {
+    .menu {
       font-size: 1rem; 
       gap: 1.5rem; 
     }
-  
-    .container-nav .route {
+    .menu .route {
       padding: 4px 8px; 
     }
   }
   
   @media (max-width: 480px) {
     .container-nav {
+      margin-top: 3%;
+      flex-direction: column;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menu.close{
+      display: flex;
+      margin: 0;
       font-size: 0.9rem; 
       gap: 1rem; 
       flex-direction: column;
+      columns: 1;
     }
   
-    .container-nav .route {
-      padding: 3px 6px; /* Reduce el padding para dispositivos pequeños */
-      width: 30%; /* Ajusta el ancho para que los elementos ocupen más espacio horizontal en dispositivos pequeños */
+    .menu.close .route {
+      padding: 3px 6px; 
+      width: 30%;
     }
   }
-  
+
+  @media (max-width: 380px) {
+    .menu{
+      display: none;
+    }
+
+    .menu.close{
+      display: flex;
+    }
+
+    .menu.close .route {
+      font-size: 0.5rem;
+      padding: 3px 6px; 
+      width: 30%;
+      overflow: scroll;
+    }
+
+
+  }
+
+
