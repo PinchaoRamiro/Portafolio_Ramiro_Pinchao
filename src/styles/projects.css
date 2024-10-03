@@ -31,3 +31,19 @@
     background-color: rgb(32, 22, 92);
     transition: background-color 0.3s ease;
   }
+
+  @media (max-width: 768px) {
+    .ul-projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ul-projects li {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ul-projects {
+      grid-template-columns: 2fr;
+    }
+  }
