@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
     <div className='links'>
       <h2>Contact</h2>
       <p className='a-contact'><strong>Email:  </strong><a href='mailto:rmrpinchao@gmail'>rmrpinchao@gmail.com</a></p>
-      <p className='a-contact'>  <strong>Phone:  </strong> <a href="tel:+573217849789">+57 321 784 07 89</a></p>
+      <p className='a-contact'>  <strong>Phone:  </strong> <a href="tel:+573217840789">+57 321 784 07 89</a></p>
       <p className='a-contact'><strong>Whatsapp:  </strong> <a href="https://wa.me/+573217840789" target="_blank">Whatsapp</a></p>
       <p className='a-contact'><strong>Github:  </strong> <a href="https://github.com/PinchaoRamiro">PinchaoRamiro</a></p>
       <p className='a-contact'><strong>Linkedin:  </strong> <a href="https://www.linkedin.com/in/ramiro-antonio-pinchao-chachinoy-5038a931b">ramiro-antonio-pinchao-chachinoy</a></p>

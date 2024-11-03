@@ -5,7 +5,7 @@ header h1 {
 }
 
 header {
-  position: relative;
+  position:static;
 }
 
 .profile-image {
@@ -22,6 +22,7 @@ header {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 19px;
   margin-top: 20px;
+  animation: fadeInRight 1s ease-in-out;
 }
 
 .flip-card {
@@ -84,6 +85,11 @@ header {
   z-index: -1; 
   letter-spacing: 1.2px;
   line-height: 1.2;
+}
+
+.flip-card-back p,
+.flip-card-back h2 {
+  animation: fadeIn 1s ease-in-out;
 }
 
 .flip-card:hover .flip-card-inner {

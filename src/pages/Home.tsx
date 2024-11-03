@@ -1,5 +1,5 @@
 import React from 'react';
-import Imagen from '../assets/profile.jpg';
+import Imagen from '../assets/profile.webp';
 import '../styles/home.css';
 
 interface HeaderProps {
