@@ -1,3 +1,4 @@
+/* General reset and layout */
 * {
   margin: 0;
   padding: 0;
@@ -5,21 +6,33 @@
 }
 
 body {
-  font-family:'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+  font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
   letter-spacing: 0.15rem;
   background-color: #1a1a1a;
-  box-sizing: border-box;
-  color: #ffffff;
-  line-height: 1;
   background-image: url(/src/assets/background.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 100vh;
+  color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
 }
 
+/* Background Animation Container */
+#background-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.9;
+  z-index: -1; /* Ensure it stays in the background */
+  pointer-events: none;
+}
+
+/* Component-specific styles */
 a {
   text-decoration: none;
   color: #8921ff;
@@ -27,60 +40,43 @@ a {
 }
 
 strong {
-  color:#9078b8;
+  color: #9078b8;
   font-weight: bold;
   font-size: 1.1rem;
 }
-
 
 section p, section ul {
   animation: fadeInRight 1s ease-in-out;
 }
 
-h2{
-  border-bottom: 2px solid #afadad;
+h2 {
   font-size: 1.5rem;
+  color: #4f46e5; 
 }
 
 h3 {
   font-size: 1.3rem;
 }
 
+/* Animations */
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsive Design */
 @media (max-width: 430px) {
-  .container-nav{
+  .container-nav {
     flex-direction: column;
     margin-top: 20px;
   }
@@ -92,34 +88,13 @@ h3 {
     margin-top: 20px;
   }
 
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-  }
-
-  .skills h2, .projects h2 {
-    font-size: 1.5rem;
-  }
+  header h1 { font-size: 1.5rem; }
+  section h2, .skills h2, .projects h2 { font-size: 1.5rem; }
 }
 
 @media (max-width: 768px) {
-  .ul-projects {
-    grid-template-columns: 1fr;
-  }
-  body{
-    font-size: 15px;
-  }
-  header h1{
-    font-size: 2rem;
-  }
-  section h2 {
-    font-size: 1.7rem;
-  }
-  .skills h2, .projects h2 {
-    font-size: 1.7rem;
-  }
+  .ul-projects { grid-template-columns: 1fr; }
+  body { font-size: 15px; }
+  header h1 { font-size: 2rem; }
+  section h2, .skills h2, .projects h2 { font-size: 1.7rem; }
 }
-

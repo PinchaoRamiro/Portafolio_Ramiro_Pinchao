@@ -1,119 +1,147 @@
+/* Estructura básica del contenedor */
 .container-nav {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 1%;
-}
-  
-.container-nav .route {
-  color: rgb(32, 2, 141);
-  background-color: rgba(255, 255, 255, 0.452);
-  text-align: center;
-  font-weight: bold;
-  width: auto;
-  height: auto;
-  padding: 5px 10px; 
-  border-radius: 5px;
-  box-shadow: 5px 4px 5px 2px rgba(84, 49, 211, 0.568);
-  transition: background-color 0.3s ease;
-  margin: 5px;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
-  .container-nav .route:hover {
-    background-color: rgba(255, 255, 255, 0.699);
-    color: rgb(32, 2, 141);
-    transform: scale(1.1);
+/* Estilo del título o logo en el nav */
+.container-nav h1 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-right: 2rem;
+}
+
+/* Estilo de las rutas (links) */
+.container-nav .route {
+  color: #4f46e5; 
+  font-size: 1.1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  padding: 10px 15px;
+  margin: 0 1rem;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #4f46e5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.container-nav .route:hover {
+  background-color: #4f46e5;
+  color: #2d2d2d;
+  transform: scale(1.1);
+}
+
+/* Estilo del botón del menú */
+.menu-button {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-button:hover {
+  color: #2d2d2d;
+  transform: scale(1.1);
+}
+
+/* Menú de navegación */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 0;
+}
+
+.menu.close {
+  display: none;
+}
+
+/* Estilos en dispositivos más pequeños */
+@media (max-width: 768px) {
+  .container-nav {
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .container-nav h1 {
+    margin-bottom: 1rem;
+  }
+
+  .menu {
+    font-size: 1rem;
+    flex-direction: row;
+    width: 100%;
   }
 
   .menu-button {
-    color: white;
-    background: none;
-    border: none;
-    font-size: 2rem;
+    margin:0 0 1rem 0;
     align-self: start;
-    cursor: pointer;
-    margin: 0 0 0 10%;
+    display: block;
+
   }
-  
-  .menu-button:hover {
-    color: rgb(103, 34, 182);
-    transform: scale(1.1);
-    text-transform: uppercase;
-    transition: color 0.5s ease;
+
+  .menu .route {
+    padding: 8px 15px;
   }
-  
+
+  .container-nav .route{
+    margin: 0;
+  }
+
+
+}
+
+/* Ajustes aún más pequeños */
+@media (max-width: 480px) {
   .menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    align-items: center;
-    padding: 2vh 0 2vh 0;
-    margin: 0 10% 0 0;
-    border-radius: 7px;
-    gap: 1rem;
-    font-size: 1.1rem;
-    flex-wrap: wrap;
-  }
-  
-  .menu.close {
     display: none;
   }
-  
-  
-  @media (max-width: 768px) {
-    .menu {
-      font-size: 1rem; 
-      gap: 1.5rem; 
-    }
-    .menu .route {
-      padding: 4px 8px; 
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .container-nav {
-      margin-top: 3%;
-      flex-direction: column;
-    }
 
-    .menu {
-      display: none;
-    }
-
-    .menu.close{
-      display: flex;
-      margin: 0;
-      font-size: 0.9rem; 
-      gap: 1rem; 
-      flex-direction: column;
-      columns: 1;
-    }
-  
-    .menu.close .route {
-      padding: 3px 6px; 
-      width: 30%;
-    }
+  .menu.close {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
   }
 
-  @media (max-width: 380px) {
-    .menu{
-      display: none;
-    }
+  .menu.close .route {
+    width: 100%;
+    padding: 12px;
+  }
+}
 
-    .menu.close{
-      display: flex;
-    }
-
-    .menu.close .route {
-      font-size: 0.5rem;
-      padding: 3px 6px; 
-      width: 30%;
-      overflow: scroll;
-    }
-
-
+@media (max-width: 380px) {
+  .menu {
+    display: none;
   }
 
+  .menu.close {
+    display: flex;
+    align-self: start;
+  }
 
+  .menu.close .route {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}

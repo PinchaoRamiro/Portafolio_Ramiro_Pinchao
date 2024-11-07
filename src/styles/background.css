@@ -1,0 +1,10 @@
+
+.canvas-background {
+  position: absolute; /* absolute */
+  z-index: -1;        /* z-0 */
+  opacity: 0.7;       /* opacity-50 */
+  top: 0;             /* top-0 */
+  left: 0;            /* left-0 */
+  width: 100%;        /* w-full */
+  height: 100%;       /* h-full */
+}

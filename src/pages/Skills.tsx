@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Skills: React.FC = () => (
-    <div className="skills" id='skills'>
+  <div className="skills" id='skills'>
     <h2>TECHNICAL SKILLS</h2>
   <section>
     <div className="skills-category">

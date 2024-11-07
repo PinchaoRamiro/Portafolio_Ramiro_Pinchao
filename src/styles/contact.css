@@ -4,6 +4,7 @@
   margin: 0 10% 10% 10%;
   border-radius: 8px;
   box-sizing: border-box;
+  z-index: 10000;
 }
 
 .contact .links {

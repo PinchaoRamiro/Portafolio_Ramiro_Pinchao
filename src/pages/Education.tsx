@@ -10,14 +10,14 @@ const Education: React.FC = () => (
         <p>Based on the University 42 model in France, where learning is completely independent.</p>
       </li>
       <li>
-      <strong>Languages</strong>
+        <strong>Languages</strong>
         <p>English B1</p>
         <p>Spanish Native Speaker</p>
       </li>
       <li>
         <strong>University</strong>
         <p>Universidad Tecnologica de Pereira</p>
-        <p>Computer and systems engineering student - third semester</p>
+        <p>Computer and systems engineering student</p>
       </li>
     </ul>
   </section>

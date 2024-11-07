@@ -1,36 +1,55 @@
 .projects {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    padding: 30px;
-    margin: 20px;
-    border-radius: 8px;
-  }
-  
-  .projects h2 {
-    margin: 0px;
-    width: 100%;
-    font-size: 2rem;
-    border-bottom: 2px solid #afadad;
-    text-align: center;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .ul-projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    list-style: none;
-    margin: 0 7%;
-    padding: 10px;
-  }
-  
-  .ul-projects a:hover {
-    padding: 3px;
-    border-radius: 7px;
-    background-color: rgb(32, 22, 92);
-    transition: background-color 0.3s ease;
-  }
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  color: #4f46e5;  /* Texto en color claro en rgb seria rgb(  */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  border: #d1d5db solid 1px;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4f46e5;  /* Título en blanco */
+  margin-bottom: 1.5rem;
+}
+
+.projects p {
+
+  font-size: 1.2rem;
+  color: #d1d1d1; /* Texto para el estado de carga */
+}
+
+.ul-projects {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0;
+}
+
+.ul-projects li {
+  margin-bottom: 1rem;
+}
+
+.ul-projects li a {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #74b9da;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ul-projects li a:hover {
+  color: #4f46e5;
+}
+
+.ul-projects li a:focus {
+  outline: none;
+  color: #4f46e5;
+}
+
 
   @media (max-width: 768px) {
     .ul-projects {
