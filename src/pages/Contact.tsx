@@ -5,7 +5,7 @@ import { useState } from 'react';
 const Contact: React.FC = () => {
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
       const phoneNumber = '573217840789'; 
       const encodedMessage = encodeURIComponent(message);
@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
 
-  const handleSubmitEmail = (e) => {
+  const handleSubmitEmail = (e: React.FormEvent) => {
       e.preventDefault();
       const email = 'rmrpinchao@gmail'; 
       const encodedSubject = encodeURIComponent(subject);

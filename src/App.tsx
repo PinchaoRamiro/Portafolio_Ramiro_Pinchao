@@ -6,7 +6,9 @@ import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
-import BackgroundAnimation from './components/background.jsx';
+// @ts-ignore
+import AnimatedBackground from './components/background';
+
 import './styles.css';
 import './styles/home.css';
 import './styles/nav.css';
@@ -35,7 +37,7 @@ const App: React.FC = () => {
     <Route path="/Projects" element={<Projects />} />
   </Routes>
   <div id="background-animation-container">
-    <BackgroundAnimation className="background-animation" />
+    <AnimatedBackground />
   </div>
 </Router>
 
