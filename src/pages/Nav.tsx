@@ -16,6 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ onToggleFlip }) => {
     <nav className="container-nav">
       <button title='Menu' onClick={toggleMenu} className="menu-button">
         ☰
+        <p className={`${isMenuOpen ? '' : 'Word_menu'}`}>Menu</p>
       </button>
       <div className={`menu ${isMenuOpen ? 'close' : ''}`}>
         <Link className='route' to="/" onClick={onToggleFlip}>Home</Link>

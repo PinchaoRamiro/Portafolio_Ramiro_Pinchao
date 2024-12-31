@@ -50,6 +50,20 @@
   font-family: 'Courier New', Courier, monospace;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
+  align-self: start;
+  display:flex;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.menu-button p {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  margin: auto;
+}
+
+.Word_menu{
+  display:none;
 }
 
 .menu-button:hover {
@@ -90,11 +104,23 @@
     width: 100%;
   }
 
-  .menu-button {
-    margin:0 0 1rem 0;
-    align-self: start;
-    display: block;
+  .Word_menu{
+    display:none;
+  }
 
+  .menu-button {
+    margin: 0rem;
+    align-self: start;
+    display:flex;
+    gap: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+
+
+  .menu-button p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    margin: auto;
   }
 
   .menu .route {
@@ -124,6 +150,20 @@
     padding: 0;
   }
 
+  .menu-button{
+    margin-bottom: 0.7rem;
+  }
+
+  .menu-button p{
+    display:none;
+  }
+
+  .menu-button .Word_menu{
+    margin: auto;
+    padding: 0;
+    display:flex;
+  }
+
   .menu.close .route {
     width: 100%;
     padding: 12px;
@@ -138,6 +178,10 @@
   .menu.close {
     display: flex;
     align-self: start;
+  }
+
+  .Word_menu{
+    display: flex;
   }
 
   .menu.close .route {
