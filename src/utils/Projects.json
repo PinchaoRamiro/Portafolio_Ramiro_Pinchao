@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": 1,
-      "image": "src/assets/imagesProjects/MusicPlayer.webp",
+      "image": "/imagesProjects/MusicPlayer.webp",
       "title": "MusicPlayerApp",
       "summary": "This is a music application for Android developed in Kotlin. The app allows users to play, create, and edit music playlists.",
       "github": "https://github.com/PinchaoRamiro/MusicPlayerApp",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "image": "src/assets/imagesProjects/VirtualStore.webp",
+      "image": "/imagesProjects/VirtualStore.webp",
       "title": "Rp Virtual Store",
       "summary": "This is a desktop virtual store application developed in Java, with a backend in JavaScript and a PostgreSQL database.",
       "github": "https://github.com/PinchaoRamiro/TiendaJava",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "image": "src/assets/imagesProjects/CryptoPriceTracker.webp",
+      "image": "/imagesProjects/CryptoPriceTracker.webp",
       "title": "CryptoPriceTracker",
       "summary": "This is a cryptocurrency price tracking app, built with Next.js, TypeScript, Tailwind, and React-Query.",
       "github": "https://github.com/PinchaoRamiro/Simple-Crypto-Price-Tracker",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "image": "src/assets/imagesProjects/memorama.webp",
+      "image": "/imagesProjects/memorama.webp",
       "title": "Memorama",
       "summary": "This is a web application that recreates the memory card game using only CSS and HTML.",
       "github": "https://github.com/PinchaoRamiro/Memorama",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "image": "src/assets/imagesProjects/kanbanAPI.webp",
+      "image": "/imagesProjects/kanbanAPI.webp",
       "title": "Kanban API",
       "summary": "This is a REST API for a Kanban board developed with Node.js, Express.js, PostgreSQL, and JWT for authentication.",
       "github": "https://github.com/PinchaoRamiro/Kanban-con-TypeScript",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "image": "src/assets/imagesProjects/kakuroSolver.webp",
+      "image": "/imagesProjects/kakuroSolver.webp",
       "title": "Kakuro Solver",
       "summary": "This is an application to solve Kakuro boards, built in Python using heuristic concepts and backtracking.",
       "github": "https://github.com/PinchaoRamiro/ProgIIIG1-Act08-KakuroSolver",
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "image": "src/assets/imagesProjects/rockPaperScissors.webp",
+      "image": "/imagesProjects/rockPaperScissors.webp",
       "title": "Rock, Paper, Scissors",
       "summary": "This is a web application of the Rock, Paper, Scissors game using vanilla JavaScript, HTML, and CSS.",
       "github": "https://github.com/PinchaoRamiro/rock-paper-scissors",
@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "image": "src/assets/imagesProjects/tmdbApi.webp",
+      "image": "/imagesProjects/tmdbApi.webp",
       "title": "TMDB API",
       "summary": "Using the TMDB API, a REST API was created to facilitate retrieving movie and series information. Built with Node.js and Express.js.",
       "github": "https://github.com/PinchaoRamiro/APIPublicTMDB",
