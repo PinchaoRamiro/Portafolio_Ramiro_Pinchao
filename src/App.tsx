@@ -1,46 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Navbar from './pages/Nav';
+import Navbar from './components/Nav';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
-// @ts-ignore
-import AnimatedBackground from './components/background';
-
-import './styles.css';
-import './styles/home.css';
-import './styles/nav.css';
-import './styles/skills.css';
-import './styles/education.css';
-import './styles/projects.css';
-import './styles/contact.css';
-import './styles/background.css';
+import AboutMe from './pages/AboutMe';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const toggleFlip = () => {
-    setIsFlipped(prev => !prev);
-  };
 
   return (
-<Router>
-  <Navbar onToggleFlip={toggleFlip} />
-  <Routes>
-    <Route path="/" element={<Home isFlipped={isFlipped} />} />
-    <Route path="/About" element={<Home isFlipped={isFlipped} />} />
-    <Route path="/Education" element={<Education />} />
-    <Route path="/Contact" element={<Contact />} />
-    <Route path="/Skills" element={<Skills />} />
-    <Route path="/Projects" element={<Projects />} />
-  </Routes>
-  <div id="background-animation-container">
-    <AnimatedBackground />
-  </div>
-</Router>
-
+    <Router>
+      <Navbar />
+      <main className="container mx-auto px-4 py-8">
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/About-me" element={<AboutMe />} />
+          <Route path="/Education" element={<Education />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Skills" element={<Skills />} />
+          <Route path="/Projects" element={<Projects />} />
+        </Routes>
+      </main>
+      <Footer /> 
+    </Router>
   );
 };
 

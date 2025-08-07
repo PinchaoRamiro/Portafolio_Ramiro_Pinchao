@@ -1,54 +1,100 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect, useRef, useState } from "react";
+import ProjectCard from "../components/ProjectCard";
+import ProjectType from "../utils/ProjectType";
+import projectsJson from "../utils/Projects.json";
 
-interface Repo {
-  id: number;
-  name: string;
-  html_url: string;
-  description: string;
-}
+export default function Projects() {
+  const [projects, setProjects] = useState<ProjectType[]>([]);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [hovering, setHovering] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-const Projects: React.FC = () => {
-  const [repos, setRepos] = useState<Repo[]>([]);
-  const [loading, setLoading] = useState(true);
-  const excludedRepos = ["PinchaoRamiro", "proyecto1", "Proyecto3","Proyecto4","Proyecto5", "proyecto6"
-    ,"Portafolio_Ramiro_Pinchao"
-  ];
+  const isMobile = () => window.innerWidth < 768;
+
+  // 🔹 Fake paged fetch from JSON
+  const fetchProjects = async () => {
+    const newProjects: ProjectType[] = projectsJson.projects.slice(
+      (page - 1) * 8,
+      page * 8
+    );
+    if(isMobile()) return setProjects(newProjects);
+    setProjects((prev) => [...prev, ...newProjects]);
+    if (newProjects.length < 8) setHasMore(false);
+  };
+
+  // 🔹 Load projects on page change
+  useEffect(() => {
+    fetchProjects();
+  }, [page]);
 
   useEffect(() => {
-    const fetchRepos = async () => {
-      try {
-        const response = await axios.get('https://api.github.com/users/PinchaoRamiro/repos');
-        const filteredRepos = response.data.filter((repo: Repo) => !excludedRepos.includes(repo.name));
-        setRepos(filteredRepos);
-      } catch (error) {
-        console.error('Error fetching the repositories', error);
-      } finally {
-        setLoading(false);
+    if (isMobile()) return; // ⛔ No auto-scroll en móvil
+
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (container.scrollLeft >= container.scrollWidth / 2) {
+      container.scrollLeft = container.scrollWidth / 4;
+    }
+
+    const scrollSpeed = 0.5;
+    let animationFrameId: number;
+
+    const autoScroll = () => {
+      if (!hovering) {
+        container.scrollLeft += scrollSpeed;
+
+        const nearEnd =
+          container.scrollLeft + container.clientWidth >=
+          container.scrollWidth - 100;
+
+        if (nearEnd && hasMore) {
+          setPage((prev) => prev + 1);
+        }
+
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        }
       }
+
+      animationFrameId = requestAnimationFrame(autoScroll);
     };
 
-    fetchRepos();
-  }, []);
+    animationFrameId = requestAnimationFrame(autoScroll);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [hovering, hasMore]);
+
+  // 🔁 Duplicar proyectos para que se vea "infinito"
+  const duplicatedProjects = [...projects, ...projects];
 
   return (
-    <section className="projects" id='projects'>
-      <h2>My Projects</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <ul className='ul-projects' >
-          {repos.map(repo => (
-            <li key={repo.id}>
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                {repo.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
-  );
-};
+    <div className="p-6 mt-0">
+      <div
+        ref={containerRef}
+        className="
+          flex flex-col md:flex-row
+          overflow-y-auto md:overflow-x-auto
+          px-2 p-5 gap-6
+          scrollbar-hide scroll-smooth
+          shadow-[0_0_15px_5px_rgba(0,0,0,0.15)] rounded-2xl
+          max-h-[calc(100vh-10rem)] md:max-h-none
+        "
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+      >
+        {
+          isMobile()
+            ?  projects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))
 
-export default Projects;
+            : duplicatedProjects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))
+        }
+      </div>
+    </div>
+  );
+
+}
