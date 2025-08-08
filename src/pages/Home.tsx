@@ -1,6 +1,7 @@
 import React from 'react';
 import Imagen from '../assets/profile.png';
 import { FaDownload } from 'react-icons/fa';
+import CV_download from "../assets/CV - Ramiro Pinchao.pdf";
 
 const Home: React.FC = () => (
   <div
@@ -32,7 +33,7 @@ const Home: React.FC = () => (
 
     {/* Botón CV */}
     <a
-      href="src/assets/CV - Ramiro Pinchao.pdf"
+      href={CV_download}
       download="CV_Ramiro_Pinchao.pdf"
       className="mt-6 md:mt-0 md:absolute bottom-6 right-6 bg-cyan-600 text-white
         px-5 py-2 rounded-lg hover:bg-cyan-700 transition
